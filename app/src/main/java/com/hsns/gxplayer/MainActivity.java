@@ -289,7 +289,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onCompletion(MediaPlayer mediaPlayer) {
         Log.d("daxiang", "onCompletion");
-        doNext();
+        if(playStyle!=STYLE_SINGLE) {
+            doNext();
+        }else{
+            rePlay();
+            doClickPlayOrPause();
+        }
     }
 
     /**
@@ -324,7 +329,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean getIndexByPlayStyle(){
         switch (playStyle) {
             case STYLE_SINGLE:
-                return false;
             case STYLE_SX:
                 return true;
             case STYLE_RAND:
