@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GxPlayer</string>
+    <string name="get_video">获取并播放视频</string>
+    <string name="prev">上一首</string>
+    <string name="next">下一首</string>
+    <string name="loop_single">单曲循环</string>
+    <string name="loop_sx">顺序循环</string>
+    <string name="loop_rand">随机循环</string>
+    <string name="replay">重播</string>
+    <string name="set_loop_suc">设置循环播放成功</string>
+</resources>

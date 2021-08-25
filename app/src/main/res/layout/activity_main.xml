@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.yqw.hotheart.HeartConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:degrees_interval_max="20"
+        app:degrees_interval_min="-20"
+        android:id="@+id/heartlayout"
+        app:swipe_image="@drawable/ic_heart"
+        tools:context=".MainActivity">
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="300dp"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:descendantFocusability="beforeDescendants"
+            android:background="@android:color/black"
+            android:id="@+id/viewpage2"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn"
+            android:text="@string/get_video"
+            android:textSize="20sp"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@mipmap/pause"
+            android:visibility="gone"
+            android:id="@+id/playpause"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prev"
+            android:text="@string/prev"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/btn"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/next"
+            android:text="@string/next"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/prev"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loop_single"
+            android:text="@string/loop_single"
+            android:background="@color/red"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/next"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loop_sx"
+            android:text="@string/loop_sx"
+            android:background="@color/colorPrimary"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/loop_single"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loop_rand"
+            android:text="@string/loop_rand"
+            android:visibility="gone"
+            android:background="@color/colorPrimary"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/loop_sx"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/replay"
+            android:text="@string/replay"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/loop_rand"/>
+
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginRight="300dp"
+            android:id="@+id/seekbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"
+            android:max="100"
+            android:visibility="gone"
+            android:progressDrawable="@android:color/holo_red_light"
+            style="?android:attr/progressBarStyleHorizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/current_time"
+            android:textColor="@android:color/holo_blue_bright"
+            app:layout_constraintTop_toBottomOf="@id/seekbar"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_time"
+            android:textColor="@android:color/holo_blue_bright"
+            app:layout_constraintTop_toBottomOf="@id/seekbar"
+            android:layout_marginRight="300dp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </com.yqw.hotheart.HeartConstraintLayout>
+</layout>
